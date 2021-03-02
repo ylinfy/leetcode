@@ -4,7 +4,7 @@ class ListNode:
         self.next = None
 
 class Solution:
-    # 递归法，DFS
+    # 递归法，DFS, time: N
     def __init__(self):
         self.res = []
 
@@ -14,7 +14,7 @@ class Solution:
         self.res.append(head.val)
         return self.res
 
-    # 辅助栈
+    # 辅助栈, time: N
     def reversePrint(self, head):
         stack = []
         while head:
