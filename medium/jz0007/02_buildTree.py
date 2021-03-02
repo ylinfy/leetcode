@@ -17,7 +17,7 @@ class Solution:
             node.left = recursion(root + 1, left, i - 1)
             node.right = recursion(root + (i - left + 1), i + 1, right)
             return node
-        # 先用字典将对应关系存储起来
+        # 先用字典将inorder索引对应关系存储起来
         dic = {}
         for i in range(len(inorder)):
             dic[inorder[i]] = i
