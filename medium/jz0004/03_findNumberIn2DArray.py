@@ -1,5 +1,5 @@
 class Solution:
-    # recursion, time: n*logn ((2**logn)*logn = n*logn)
+    # recursion, time: n*logn ((2**logn)*logn = n*logn) --> ？不太确定
     def findNumberIn2DArray(self, matrix, target):
         if not matrix: return False
         return self._recursion(matrix, target, 0, 0, len(matrix[0]) - 1, len(matrix) - 1)
