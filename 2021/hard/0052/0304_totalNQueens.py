@@ -21,6 +21,19 @@ class Solution:
                 pie.remove(i + j)
                 na.remove(i - j)
 
-s = Solution()
-print(s.totalNQueens(4))
+    # 位运算 & DFS, time: N!
+    def totalNQueens(self, n):
+        self.count = 0
+        self.DFS(n, 0, 0, 0, 0)
+        return self.count
 
+    def DFS(self, n, row, col, pie, na):
+        if row == n:
+            self.count += 1
+            return
+
+        bits = (~(col | pie | na)) & ((1 << n) - 1)
+        while bits:
+            p = bits & -bits
+            bits &= bits - 1
+            self.DFS(n, row + 1, col | p, (pie | p) << 1, (na | p) >> 1)

@@ -1,7 +1,8 @@
 class Solution:
     def __init__(self):
         self.dic = {}
-
+    
+    # 递归，操作索引, time: N
     def buildTree(self, preorder, inorder):
         for i in range(len(inorder)):
             self.dic[inorder[i]] = i
