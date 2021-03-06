@@ -1,4 +1,5 @@
 class Solution:
+    # 递归，类似于DFS，先往深处递归，一直递归到尾，数据先压栈再弹栈
     def __init__(self):
         self.res = []
 

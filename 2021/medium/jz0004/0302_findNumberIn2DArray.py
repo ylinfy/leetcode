@@ -9,6 +9,7 @@ class Solution:
         if matrix[top][left] > target or matrix[bottom][right] < target: return False
         mid = left + ((right - left) >> 1)
 
+        # 中间查找最接近target，并且大于target的值时，方法2比方法1在测试用例上更快?
         # 1. 在竖直方向使用二分查找
         lo, hi = top, bottom
         while lo <= hi:
@@ -30,9 +31,6 @@ class Solution:
         return self._recursion(matrix, target, left, row, mid - 1, bottom) or \
         self._recursion(matrix, target, mid + 1, top, right, row - 1)
 
-s = Solution()
-matrix = [[1,4,7,11,15],[2,5,8,12,19],[3,6,9,16,22],[10,13,14,17,24],[18,21,23,26,30]]
-print(s.findNumberIn2DArray(matrix, 5))
         
             
 

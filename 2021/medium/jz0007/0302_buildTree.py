@@ -1,4 +1,5 @@
 class Solution:
+    # 递归，time: N
     def buildTree(self, preorder, inorder):
         if not preorder: return None
         node = TreeNode(preorder[0])
