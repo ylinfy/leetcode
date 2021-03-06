@@ -8,7 +8,7 @@ class Solution:
         node.right = self.buildTree(preorder[idx+1:], inorder[idx+1:])
         return node
 
-    # time: N (速度相对更快)
+    # time: N --> (速度相对更快)
     def buildTree(self, preorder, inorder):
         def recursion(root, left, right):
             if left > right: return

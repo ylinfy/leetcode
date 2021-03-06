@@ -17,7 +17,7 @@ class Solution:
             head = head.next
         return stack[::-1]
 
-    # one line, time: N
+    # one line, time: N, 速度最慢
     def reversePrint(self, head):
         return self.reversePrint(head.next) + [head.val] if head else []
         

@@ -11,6 +11,7 @@ class CQueue:
         self.IN.append(value)
 
     # time: N
+    # 分三种情况
     def deleteHead(self):
         if self.OUT: return self.OUT.pop()
         if not self.IN: return -1
