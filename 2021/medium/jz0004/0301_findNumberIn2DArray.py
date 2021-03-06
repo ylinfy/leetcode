@@ -13,10 +13,12 @@ class Solution:
         lo, hi = start, end - 1
         while lo <= hi:
             mid = lo + ((hi - lo) >> 1)
+            # 竖直方向
             if isVetical:
                 if matrix[mid][start] == target: return True
                 if matrix[mid][start] < target: lo = mid + 1
                 else: hi = mid - 1
+            # 水平方向
             else:
                 if matrix[start][mid] == target: return True
                 if matrix[start][mid] < target: lo = mid + 1
