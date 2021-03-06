@@ -27,4 +27,28 @@ class Solution:
             self.DFS(n, row + 1, col | p, (pie | p) << 1, (na | p) >> 1)
             self.board[row][col_pos] = '.'
             
+    # 回溯, time: N!
+    def solveNQueens(self, n):
+        self.res = []
+        board = [['.'] * n for _ in range(n)]
+        self.backtrack(n, 0, set(), set(), set(), board)
+        return self.res
+
+    def backtrack(self, n, i, col, pie, na, board):
+        if i == n: 
+            t_res = [''.join(x) for x in board]
+            self.res.append(t_res)
+
+        for j in range(n):
+            if j not in col and (i + j) not in pie and (i - j) not in na:
+                col.add(j)
+                pie.add(i + j)
+                na.add(i - j)
+                board[i][j] = 'Q'
+                self.backtrack(n, i + 1, col, pie, na, board)
+                col.remove(j)
+                pie.remove(i + j)
+                na.remove(i - j)
+                board[i][j] = '.'
+                
 

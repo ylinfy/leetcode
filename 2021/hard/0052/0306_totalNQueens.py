@@ -19,7 +19,6 @@ class Solution:
                 col.remove(j)
                 pie.remove(i + j)
                 na.remove(i - j)
-    
 
     # 位运算 & DFS, time: N!
     def totalNQueens(self, n):
