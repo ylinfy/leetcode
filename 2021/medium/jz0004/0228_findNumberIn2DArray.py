@@ -8,3 +8,4 @@ class Solution:
             elif matrix[i][j] < target: i += 1
             else: return True
         return False
+
