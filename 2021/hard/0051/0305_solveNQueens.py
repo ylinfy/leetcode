@@ -1,5 +1,5 @@
 class Solution:
-    # 01
+    # 回溯，time: N!
     def solveNQueens(self, n):
         self.res = []
         board = [['.'] * n for _ in range(n)]
@@ -24,7 +24,7 @@ class Solution:
                 na.remove(i - j)
                 board[i][j] = '.'
 
-    # 02
+    # 位运算 & DFS, time: N!
     def solveNQueens(self, n):
         self.res = []
         board = [['.'] * n for _ in range(n)]

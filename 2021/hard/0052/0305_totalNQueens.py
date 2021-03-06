@@ -1,5 +1,5 @@
 class Solution:
-    # 位运算，time: N!
+    # 终极版：位运算，time: N!
     def totalNQueens(self, n):
         if n < 1: return 0
         self.count = 0
