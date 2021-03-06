@@ -17,7 +17,7 @@ class Solution:
             p = t_pos = bits & -bits  # 取出最低位的1
             bits &= bits - 1  # 清零最低位的1,相当于在该位置放入皇后
             
-            # 得到对应的列坐标
+            # row为横坐标，此处用于得到对应的列坐标
             col_pos = -1
             while t_pos:
                 t_pos >>= 1 
