@@ -1,0 +1,42 @@
+.
+├── 2021
+│   ├── easy
+│   │   ├── jz0006
+│   │   │   ├── 0301_reversePrint.py
+│   │   │   ├── 0302_reversePrint.py
+│   │   │   ├── 0303_reversePrint.py
+│   │   │   └── 0307_reversePrint.py
+│   │   └── jz0009
+│   │       ├── 0303_CQueue.py
+│   │       ├── 0304_CQueue.py
+│   │       └── 0305_CQueue.py
+│   ├── hard
+│   │   ├── 0051
+│   │   │   ├── 0304_solveNQueens.py
+│   │   │   ├── 0305_solveNQueens.py
+│   │   │   └── 0306_solveNQueens.py
+│   │   └── 0052
+│   │       ├── 0304_totalNQueens.py
+│   │       ├── 0305_totalNQueens.py
+│   │       └── 0306_totalNQueens.py
+│   └── medium
+│       ├── 0015
+│       │   └── 0307_threeSum.py
+│       ├── jz0004
+│       │   ├── 0228_findNumberIn2DArray.py
+│       │   ├── 0301_findNumberIn2DArray.py
+│       │   ├── 0302_findNumberIn2DArray.py
+│       │   └── 0307_findNumberIn2DArray.py
+│       ├── jz0007
+│       │   ├── 0302_buildTree.py
+│       │   ├── 0303_buildTree.py
+│       │   └── 0304_buildTree.py
+│       └── jz0026
+├── __pycache__
+│   └── random.cpython-36.pyc
+├── random_for_lc.py
+├── README.md
+├── tree.txt
+└── [力扣] 第 47 场双周赛.ics
+
+13 directories, 26 files
