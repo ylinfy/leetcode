@@ -10,7 +10,6 @@ problem_dirs = [os.path.join(x, p) for x in level_dirs for p in os.listdir(x)]
 # print(problem_dirs)
 print("共完成了%d题" % len(problem_dirs))
 print("0308还剩余：217000")
-print("待完善题目详情：")
 
 names = []
 done = []
@@ -28,9 +27,15 @@ for p in problem_dirs:
     names.append([p, t_name])
 
 times = sorted(names, key=lambda x:x[1])
+print("\n待完善题目详情：")
 for p, n in times:
+    if len(n) < 3: continue
     print("{0:<20s}{1}".format(p, n))
 
+print("\n今天复习题目详情：")
+for p, n in times:
+    if len(n) > 2: continue
+    print("{0:<20s}{1}".format(p, n))
 
 # 抽取题号(待优化, 可能投到已经做过的)
 print("\n正在进行剑指offer系列...")
@@ -41,7 +46,7 @@ for i in range(69):
         choices.append(i)
 print("还剩余题号：", choices)
 print("还剩余题数量：", len(choices))
-print("今天抽中的题号：剑指%d" % random.choice(choices))
+print("\n今天抽中的题号：剑指%d" % random.choice(choices))
 
 # 统计
 # print(calendar.monthcalendar(2021,3))
