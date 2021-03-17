@@ -30,24 +30,10 @@ times = sorted(names, key=lambda x:x[1])
 print("\n待完善题目详情：")
 for p, n in times:
     if len(n) < 3: continue
-    print("{0:<20s}{1}".format(p, n))
+    print("{0:<22s}{1}".format(p, n))
 
 print("\n今天复习题目详情：")
 for p, n in times:
     if len(n) > 2: continue
-    print("{0:<20s}{1}".format(p, n))
-
-# 抽取题号(待优化, 可能投到已经做过的)
-print("\n正在进行剑指offer系列...")
-choices = []
-for i in range(69):
-    if i < 4 or i in [15]: continue
-    if i not in jz_done:
-        choices.append(i)
-print("还剩余题号：", choices)
-print("还剩余题数量：", len(choices))
-print("\n今天抽中的题号：剑指%d" % random.choice(choices))
-
-# 统计
-# print(calendar.monthcalendar(2021,3))
+    print("{0:<22s}{1}".format(p, n))
 
