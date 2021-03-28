@@ -24,6 +24,7 @@ class Solution:
         res = []
         s_len = len(s)
         permute(s, [])
+        return res
 
 
     # 通用回溯，time: N! * N
