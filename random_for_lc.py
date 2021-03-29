@@ -26,7 +26,8 @@ for p in problem_dirs:
 
     # 记录未完成四遍的题
     t_name = os.listdir(p)
-    if len(t_name) >= 4:
+    if len(t_name) >= 5: continue
+    if len(t_name) == 4:
         names4.append([p, t_name])
     else:
         names.append([p, t_name])

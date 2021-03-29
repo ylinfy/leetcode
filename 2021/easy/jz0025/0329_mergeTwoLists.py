@@ -1,0 +1,32 @@
+class Solution:
+    # 递归，time: N
+    def mergeTwoLists(self, l1, l2):
+        if not l1: return l2
+        if not l2: return l1
+        if l1.val > l2.val:
+            l2.next = self.mergeTwoLists(l1, l2.next)
+            return l2
+        else:
+            l1.next = self.mergeTwoLists(l1.next, l2)
+            return l1
+
+
+    # 遍历，time: N
+    def mergeTwoLists(self, l1, l2):
+        if not l1: return l2
+        if not l2: return l1
+        # 定义临时节点，用于遍历
+        tHead = dummy = ListNode(0)
+        while l1 and l2:
+            if l1.val > l2.val:
+                tHead.next = l2
+                l2 = l2.next
+            else:
+                tHead.next = l1
+                l1 = l1.next
+            tHead = tHead.next
+        tHead.next = l1 if l1 else l2
+        return dummy.next
+                
+            
+            
