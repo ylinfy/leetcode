@@ -20,11 +20,12 @@ jz_done = []
 
 for p in problem_dirs:
     # 记录做过的所有题
+    # print(p)
     p_name = p.split('/')[-1]
     if 'jz' in p_name: jz_done.append(int(p_name[2:6]))
     else: done.append(int(p_name))
 
-    # 记录未完成四遍的题
+    # 记录未完成五遍的题
     t_name = os.listdir(p)
     if len(t_name) >= 5: continue
     if len(t_name) == 4:
@@ -49,16 +50,19 @@ last_mon_three_days = [last_mon + cday for cday in cur_days]
 
 # 求上个月同一天
 for p, n in times4:
+    n.sort()
     if n[-1][:4] in last_mon_three_days:
         print("{0:<22s}{1}".format(p, n))
 
 print("上周待完善题目详情：")
 for p, n in times:
+    n.sort()
     if len(n) < 3: continue
     print("{0:<22s}{1}".format(p, n))
 
 print("\n今天复习题目详情：")
 for p, n in times:
+    n.sort()
     if len(n) > 2: continue
     print("{0:<22s}{1}".format(p, n))
 
