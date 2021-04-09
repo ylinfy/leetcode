@@ -11,7 +11,7 @@ level_dirs = [os.path.join(year_dir, x) for x in os.listdir(year_dir)]
 problem_dirs = [os.path.join(x, p) for x in level_dirs for p in os.listdir(x)]
 # print(problem_dirs)
 print("共完成了%d题" % len(problem_dirs))
-print("0308还剩余：217000")
+print("0408还剩余：210000")
 
 names = []
 names4 = []
