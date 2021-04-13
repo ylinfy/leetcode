@@ -43,11 +43,9 @@ class Solution:
         while bits:
             p = bits & -bits  # 获取最低位的1
             bits &= bits - 1  # 打掉最低位的1，表示在该位置放置皇后
-            dummy, col_pos = p, -1
-            while dummy:
-                dummy >>= 1
-                col_pos += 1
-            board[row][col_pos] = 'Q'
+            cid = bin(p - 1).count('1')
+            board[row][cid] = 'Q'
+            # row每增加一行，pie和na原有的位都应进行相应的左右移
             self.DFS(n, row + 1, col | p, (pie | p) << 1, (na | p) >> 1, board)
-            board[row][col_pos] = '.'
+            board[row][cid] = '.'
 
