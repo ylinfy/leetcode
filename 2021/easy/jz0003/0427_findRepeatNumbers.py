@@ -1,7 +1,8 @@
 class Solution:
     def findRepeatNumbers(self, nums):
         for i in range(len(nums)):
-            if nums[i] == i: continue
-            if nums[i] == nums[nums[i]]: return nums[i]
-            nums[nums[i]], nums[i] = nums[i], nums[nums[i]]
+            j = nums[i]
+            if j == i: continue
+            if nums[i] == nums[j]: return nums[i]
+            nums[i], nums[j] = nums[j], nums[j]
 
