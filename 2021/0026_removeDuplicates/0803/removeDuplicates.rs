@@ -2,7 +2,7 @@ impl Solution {
     pub fn remove_duplicates(nums: &mut Vec<i32>) -> i32 {
         /// use lib method
         // nums.dedup();
-        // nums.len()
+        // nums.len() as i32
         match nums.is_empty() {
             true => 0,
             _ => {
