@@ -1,5 +1,5 @@
 impl Solution {
-    pub fn search_insert(nums: &Vec<i32>, target: i32) -> i32 {
+    pub fn search_insert(nums: Vec<i32>, target: i32) -> i32 {
         use std::cmp::Ordering;
 
         let mut left = 0_i32;
@@ -14,14 +14,13 @@ impl Solution {
         }
         left
 
-
-        /// method 2
+        /// use lib method
+        /// method 1
         match nums.binary_search_by(|mid| mid.cmp(&target)) {
             Ok(i) => i as i32,
             Err(j) => j as i32
         }
-
-        /// method 3
+        /// method 2
         nums.binary_search(&target).unwrap_or_else(|x| x) as i32
     }
 }
